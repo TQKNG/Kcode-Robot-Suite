@@ -1,0 +1,24 @@
+{
+  "name": "kcode-demo-sandbox",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "dev": "pnpm --filter @kcode/web dev",
+    "build": "pnpm --filter @kcode/web build",
+    "start": "pnpm --filter @kcode/web start",
+    "lint": "pnpm --filter @kcode/web lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@kcode/operational-dashboard": "workspace:*",
+    "@kcode/plugin-sdk": "workspace:*",
+    "@kcode/robot-engagement": "workspace:*",
+    "@kcode/telepresence": "workspace:*",
+    "@kcode/wheremybot": "workspace:*"
+  }
+}
