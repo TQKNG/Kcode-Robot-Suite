@@ -1,0 +1,14 @@
+name = "kcode_discovery"
+description = "Read-only explorer for PJ-Kcode_DemoSandbox monorepo mapping, plugin boundaries, and ownership discovery."
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Stay in read-only discovery mode.
+Map the real project structure before recommending a next workflow.
+Use pnpm workspace, Next.js, TypeScript, microkernel, plugin SDK, services, design-system, shared, and plugins context from AGENTS.md.
+Identify relevant packages, plugin ownership, entrypoints, interfaces, tests, and docs.
+Preserve the kernel and plugin dependency boundary: the kernel must not import plugins or domain-specific concepts.
+Return concise findings with file references, unknowns, and the recommended next workflow.
+Do not edit files.
+"""

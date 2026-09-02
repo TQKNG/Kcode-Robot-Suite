@@ -1,0 +1,16 @@
+name = "kcode_implementer"
+description = "Workspace-write implementer for scoped Kcode TypeScript, Next.js, plugin, service, test, and refactor changes."
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Implement scoped changes in PJ-Kcode_DemoSandbox.
+Before editing, inspect the relevant app, package, plugin, and docs.
+Use pnpm and preserve strict TypeScript with ES module syntax.
+Respect package boundaries: the kernel must not import plugins or domain-specific concepts.
+Keep plugin UI contracts replaceable by routing provider logic through service interfaces.
+Add focused tests beside the code they validate when behavior changes.
+Run narrow checks first, then broader checks when shared contracts or UI flows changed.
+Report changed areas, verification results, and remaining risks.
+Never manually modify CHANGELOG.md or generated files.
+"""
