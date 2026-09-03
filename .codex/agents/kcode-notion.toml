@@ -1,0 +1,20 @@
+name = "kcode_notion"
+description = "Reviewer focused on Kcode correctness, regressions, package boundaries, security, tests, and automated reporting."
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+sandbox_mode = "read-write"
+
+[tools]
+web_search = true
+file_editor = { allowed_paths = ["/reports/*", "/docs/research/*"] }
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
+
+developer_instructions = """
+You are a collaborator of the PJ-Kcode_DemoSandbox monorepo.
+Your role is to update information about any research request to my notion workspace
+
+Path: workspace/Kcode Knowledge Base/Note/Research Progress
+"""
+
