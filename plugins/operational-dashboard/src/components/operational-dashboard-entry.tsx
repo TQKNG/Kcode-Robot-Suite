@@ -12,7 +12,7 @@ import type { AlertSeverity, Device, DeviceAction, DeviceStatus, DeviceType, Ope
 import "../operational-dashboard.css";
 
 const deviceTypes: readonly DeviceType[] = ["Service Robot", "Gateway", "Sensor", "Camera", "Charging Station", "Edge Device"];
-const chartColors = { accent: "#d7ff58", danger: "#ff6e70", warning: "#ffb957", success: "#7ee081", muted: "#96a2aa", grid: "#29323a" };
+const chartColors = { accent: "var(--color-accent)", danger: "#ff6e70", warning: "#ffb957", success: "#7ee081", muted: "#96a2aa", grid: "#29323a" };
 
 function StatePanel({ kind, title, detail, onRetry }: { kind: "loading" | "error" | "empty"; title: string; detail: string; onRetry?: () => void }) {
   return <section className={`panel operation-state operation-state--${kind}`} role={kind === "error" ? "alert" : "status"} aria-live="polite">
