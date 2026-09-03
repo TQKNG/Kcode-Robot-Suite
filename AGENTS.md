@@ -45,8 +45,19 @@ Current tests use `*.contract.test.ts`, especially for kernel and service contra
 
 ## Agent Workflow
 
-- Always start by identify the intent of the request
-- Based on the intent of the request, invoke the appropriate workflow.
+- Before acting on any user request, perform intent recognition first, then workflow selection, then invoke the selected workflow skill.
+- Use `$intent-classifier` to identify the user's primary intent, confidence, why, secondary intents, and next handling.
+- Then use `$workflow-selection` to choose the SDLC workflow, permission posture, agent route, worktree route, next handling, and confidence.
+- Then use the workflow skill named by `$workflow-selection` for the actual response or execution path.
+- State the selected workflow briefly before taking action unless doing so would be noisy for a trivial answer.
+- Do not edit workspace files in `generic_qa`, `requirements_planning`, `design_architecture`, `code_review`, or `qa_verification` unless the selected workflow explicitly allows edits.
+- For `coding_implementation`, do not edit in the current checkout.
+- For any edit or coding request, spawn an implementer agent in the background with `codex-sdlc` so the work happens in a separate git worktree and branch.
+- Prefer project-level implementation agents when suitable.
+If no suitable custom agent exists, fall back to Codex built-in `worker`.
+- For `release_operations` and `safety_sensitive`, require explicit approval before external mutation.
+- Default SDLC workflows are `generic_qa`, `discovery_intake`, `requirements_planning`, `design_architecture`, `coding_implementation`, `code_review`, `qa_verification`, `release_operations`, `incident_debug`, and `safety_sensitive`.
+- Their matching workflow skills are `generic-qa-workflow`, `discovery-intake-workflow`, `requirements-planning-workflow`, `design-architecture-workflow`, `coding-implementation-workflow`, `code-review-workflow`, `qa-verification-workflow`, `release-operations-workflow`, `incident-debug-workflow`, and `safety-sensitive-workflow`.
 - Before changing code, inspect the relevant app, package, plugin, and docs.
 For bug fixes, reproduce the issue in the closest practical end-to-end flow before editing.
 - Keep changes scoped to the requested behavior and preserve the kernel/plugin dependency boundary.

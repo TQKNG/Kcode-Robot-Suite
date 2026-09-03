@@ -1,0 +1,3 @@
+interface:
+  display_name: "Workflow Selection"
+  short_description: "Route Codex requests through SDLC workflows"

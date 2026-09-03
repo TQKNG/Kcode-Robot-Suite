@@ -1,0 +1,3 @@
+interface:
+  display_name: "Safety Sensitive Workflow"
+  short_description: "Sensitive request handling"

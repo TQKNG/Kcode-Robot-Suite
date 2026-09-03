@@ -1,0 +1,3 @@
+interface:
+  display_name: "Intent Classifier"
+  short_description: "Categorize user request intent"

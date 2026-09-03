@@ -1,0 +1,3 @@
+interface:
+  display_name: "QA Verification Workflow"
+  short_description: "Verify finished work without feature edits"

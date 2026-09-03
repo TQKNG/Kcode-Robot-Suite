@@ -1,0 +1,3 @@
+interface:
+  display_name: "Incident Debug Workflow"
+  short_description: "Failure triage and root cause"
