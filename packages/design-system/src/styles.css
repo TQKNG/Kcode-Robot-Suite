@@ -12,14 +12,14 @@
   --color-text: #f2f5f6;
   --color-text-muted: #96a2aa;
   --color-text-subtle: #68757d;
-  --color-accent: #d7ff58;
-  --color-accent-hover: #e2ff83;
-  --color-accent-ink: #11150a;
+  --color-accent: #d7dde2;
+  --color-accent-hover: #f4f7f9;
+  --color-accent-ink: #0b0f12;
   --color-info: #62b7ff;
   --color-success: #7ee081;
   --color-warning: #ffb957;
   --color-danger: #ff6e70;
-  --color-focus: #d7ff58;
+  --color-focus: #d7dde2;
 
   /* Stable aliases used by the current shell and plugins. */
   --bg: var(--color-bg);
@@ -121,7 +121,7 @@ p { color: var(--color-text-muted); }
   text-decoration: none;
   transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
-.button:hover:not(:disabled) { border-color: var(--color-accent); background: rgb(215 255 88 / 6%); }
+.button:hover:not(:disabled) { border-color: var(--color-accent); background: rgb(215 221 226 / 8%); }
 .button:active:not(:disabled) { transform: translateY(1px); }
 .button:disabled { cursor: not-allowed; opacity: 0.45; }
 .button--primary { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-accent-ink); }
