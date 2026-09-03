@@ -1,0 +1,17 @@
+{
+  "description": "Agentic lifecycle hooks for testing prompt block and approval behavior.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python ./.codex/hooks/user_prompt_submit.py",
+            "timeout": 10,
+            "statusMessage": "Checking submitted prompt"
+          }
+        ]
+      }
+    ]
+  }
+}

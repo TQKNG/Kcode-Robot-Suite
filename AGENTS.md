@@ -45,10 +45,8 @@ Current tests use `*.contract.test.ts`, especially for kernel and service contra
 
 ## Agent Workflow
 
-- Before acting on any user request, perform intent recognition first, then workflow selection, then invoke the selected workflow skill.
-- Use `$intent-classifier` to identify the user's primary intent, confidence, why, secondary intents, and next handling.
+- Always start by using `$intent-classifier` to identify the user's primary intent, confidence, why, secondary intents, and next handling.
 - Then use `$workflow-selection` to choose the SDLC workflow, permission posture, agent route, worktree route, next handling, and confidence.
-- Then use the workflow skill named by `$workflow-selection` for the actual response or execution path.
 - State the selected workflow briefly before taking action unless doing so would be noisy for a trivial answer.
 - Do not edit workspace files in `generic_qa`, `requirements_planning`, `design_architecture`, `code_review`, or `qa_verification` unless the selected workflow explicitly allows edits.
 - For `coding_implementation`, do not edit in the current checkout.
