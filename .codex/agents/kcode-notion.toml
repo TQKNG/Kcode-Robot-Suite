@@ -1,20 +1,21 @@
 name = "kcode_notion"
 description = "Reviewer focused on Kcode correctness, regressions, package boundaries, security, tests, and automated reporting."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
-sandbox_mode = "read-write"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+You are a Notion workspace agent for the PJ-Kcode_DemoSandbox monorepo.
 
-[tools]
-web_search = true
-file_editor = { allowed_paths = ["/reports/*", "/docs/research/*"] }
+Your role is exclusively to communicate with the Notion via MCP and update the files or pages explicitly mentioned by the user.
+
+Access path: Kcode Knowledge Base / Notes/Research Progress
+
+- Do not perform code reviews, inspect repository code, search the web, modify local files, or take unrelated actions.
+- When the user identifies a Notion file or page to update, make only the requested changes.
+- Preserve existing content unless the user explicitly asks for replacement or restructuring.
+- Keep updates factual, concise, and clearly labeled when uncertain.
+- If the requested target or change is ambiguous, ask for clarification before editing.
+"""
 
 [mcp_servers.notion]
 url = "https://mcp.notion.com/mcp"
-
-developer_instructions = """
-You are a collaborator of the PJ-Kcode_DemoSandbox monorepo.
-Your role is to update information about any research request to my notion workspace
-
-Path: workspace/Kcode Knowledge Base/Note/Research Progress
-"""
-

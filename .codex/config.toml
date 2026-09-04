@@ -2,3 +2,7 @@ approval_policy = "on-request"
 approvals_reviewer = "user"
 sandbox_mode = "workspace-write"
 
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
+enabled = true
+default_tools_approval_mode = "prompt"

@@ -1,6 +1,6 @@
 ---
 name: generic-qa-workflow
-description: Answer questions, explain repositories, brainstorm, or plan conversationally when no workspace mutation is needed.
+description: Answer questions related to this workspace, explain repositories, brainstorm, or plan conversationally when no workspace mutation is needed.
 ---
 
 # Generic Q&A Workflow

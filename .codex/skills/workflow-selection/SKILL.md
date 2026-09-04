@@ -18,7 +18,7 @@ Do not edit files, run mutating commands, or spawn agents merely to select a wor
 
 Start each routed response with a concise routing block unless the user explicitly asks only for the final answer:
 
-- `Workflow:` one of `generic_qa`, `discovery_intake`, `requirements_planning`, `design_architecture`, `coding_implementation`, `code_review`, `qa_verification`, `release_operations`, `incident_debug`, or `safety_sensitive`.
+- `Workflow:` one of `generic_qa`, `research`,`discovery_intake`, `requirements_planning`, `design_architecture`, `coding_implementation`, `code_review`, `qa_verification`, `release_operations`, `incident_debug`, or `safety_sensitive`.
 - `Permission posture:` `read-only`, `workspace-write with approval`, or `external-action approval required`.
 - `Agent route:` a project custom agent name when one is clearly available and suitable; otherwise `default`, `worker`, or `explorer`.
 - `Workflow skill:` the workflow skill to use next.
@@ -35,6 +35,8 @@ After routing, continue with the chosen workflow unless the selected workflow re
 Use read-only posture and do not edit workspace files.
 Use the built-in `default` agent.
 Use `generic-qa-workflow` next.
+
+`research` Answer queries not related to this workspace required to research from internet, cross-reference between credible source. Use `research-workflow`.
 
 `discovery_intake` handles requests where Codex must inspect a repo, logs, current state, or requirements before deciding what work is needed.
 Use read-only posture unless the user explicitly asks for generated artifacts.
@@ -53,7 +55,6 @@ Use `design-architecture-workflow` next.
 
 `coding_implementation` handles feature work, bug fixes, refactors, tests requested as code changes, migrations, project-agent edits, project-skill edits, and other workspace edits.
 For any edit or coding request, do not make the edits in the current checkout.
-Spawn an implementer agent in the background through the `codex-sdlc` wrapper so the work happens in its own branch and git worktree.
 Use project-level implementation agents first when suitable.
 Fallback to `worker`.
 Use `coding-implementation-workflow` next.
