@@ -1,4 +1,4 @@
-name = "kcode_release"
+name = "kcode-release"
 description = "Operations-focused Kcode agent for release readiness, CI/CD, migrations, versioning, and deployment notes."
 model = "gpt-5.5"
 model_reasoning_effort = "medium"

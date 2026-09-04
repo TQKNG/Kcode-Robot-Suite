@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 ./.codex/hooks/user_prompt_submit.py",
+            "command": "python ./.codex/hooks/user_prompt_submit.py",
             "timeout": 10,
             "statusMessage": "Checking submitted prompt"
           }

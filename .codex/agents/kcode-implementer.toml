@@ -1,6 +1,6 @@
-name = "kcode_implementer"
+name = "kcode-implementer"
 description = "Workspace-write implementer for scoped Kcode TypeScript, Next.js, plugin, service, test, and refactor changes."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 developer_instructions = """

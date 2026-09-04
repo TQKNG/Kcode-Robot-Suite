@@ -5,19 +5,19 @@ description: Categorize the intent of a user's request before deciding what acti
 
 # Intent Classifier
 
-Use this skill when the user asks to classify, label, route, triage, or understand the intent behind a user request.
-It is also useful when building routers, evaluators, support workflows, prompt tests, or automation rules that depend on request intent.
+- Use this skill when the user asks to classify, label, route, triage, or understand the intent behind a user request.
+- It is also useful when building routers, evaluators, support workflows, prompt tests, or automation rules that depend on request intent.
 
 ## Goal
 
-Identify what the user is trying to accomplish, not just the topic they mention.
-Prefer a useful operational category over a vague content label.
-When the request has multiple intents, identify the primary intent and any secondary intents that would change routing or handling.
+- Identify what the user is trying to accomplish, not just the topic they mention.
+- Prefer a useful operational category over a vague content label.
+- When the request has multiple intents, identify the primary intent and any secondary intents that would change routing or handling.
 
 ## Categories
 
-Use the smallest set of categories that makes the classification useful for the current task.
-Start with these defaults unless the user provides a taxonomy:
+- Use the smallest set of categories that makes the classification useful for the current task.
+- Start with these defaults unless the user provides a taxonomy:
 
 - `answer_question`: The user wants information, explanation, comparison, advice, or clarification.
 - `perform_action`: The user wants Codex to do something in the environment, such as edit files, run commands, create artifacts, manage tasks, or call tools.

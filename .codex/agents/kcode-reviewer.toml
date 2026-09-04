@@ -1,7 +1,7 @@
-name = "kcode_reviewer"
+name = "kcode-reviewer"
 description = "Read-only reviewer focused on Kcode correctness, regressions, package boundaries, security, and tests."
-model = "gpt-5.5"
-model_reasoning_effort = "high"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 developer_instructions = """
 Stay in read-only review mode.

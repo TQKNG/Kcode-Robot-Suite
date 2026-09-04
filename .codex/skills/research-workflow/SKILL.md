@@ -6,15 +6,21 @@ description: Answer queries not related to this workspace required to research f
 # Research Workflow
 
 Use this workflow after `workflow-selection` .
-First, spawn kcode_notion custom agent to initiate the research entry in notion as new. Concurrently, spawn kcode_researcher agent to perform research task. Depend on the result of the kcode_researcher agent, instruct kcode_notion agent to update the status of the research entry accordingly.
+Spawn `kcode-notion` this project-level agent to initiate the task in tasks tracker table view. Concurrently, spawn `kcode-researcher` agent to perform research task. Then, wait for `kcode-researcher` agent to finish its task, instruct `kcode-notion` agent to update the status of the task.Finally,summarize the result.
 
 ## Behavior
 
-Do not edit files, run mutating commands, create branches.
-If the user asks a question that implies edits, re-route through `workflow-selection` before acting.
+- Treat internet research as evidence-first: verify claims before summarizing.
+- Prioritize primary, official, and recent sources when available.
+- Use at least two credible sources for important claims unless a single official source is authoritative.
+- Clearly separate confirmed facts, source interpretation, and recommendations.
+- Highlight source conflicts, outdated information, or uncertainty instead of hiding them.
+- Keep scope tightly aligned with the user’s query.
+- Avoid using workspace files, local code, or project assumptions unless explicitly requested.
+
 
 ## Output
 
-Give the answer directly.
-Include reference of the sources
-Include research entry id from notionß
+- Give the answer directly.
+- Include reference of the sources
+- Include research entry id from notion

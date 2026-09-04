@@ -1,6 +1,6 @@
-name = "kcode_planner"
+name = "kcode-planner"
 description = "Read-only planner for Kcode specs, acceptance criteria, implementation sequencing, and risk capture."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 developer_instructions = """

@@ -6,3 +6,4 @@ sandbox_mode = "workspace-write"
 url = "https://mcp.notion.com/mcp"
 enabled = true
 default_tools_approval_mode = "prompt"
+
