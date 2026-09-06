@@ -6,7 +6,7 @@ description: Answer queries not related to this workspace required to research f
 # Research Workflow
 
 Use this workflow after `workflow-selection` .
-Spawn `kcode-notion` this project-level agent to initiate the task in tasks tracker table view. Concurrently, spawn `kcode-researcher` agent to perform research task. Then, wait for `kcode-researcher` agent to finish its task, instruct `kcode-notion` agent to update the status of the task.Finally,summarize the result.
+Spawn `kcode-researcher` agent to perform research task. Then, wait for `kcode-researcher` agent to finish its task, spawn `kcode-notion` agent to update notion db.Finally,summarize the result.
 
 ## Behavior
 
