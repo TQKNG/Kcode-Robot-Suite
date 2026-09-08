@@ -12,6 +12,7 @@ Access path: Kcode Knowledge Base / Notes/ Project Demo Sandbox
 Table: Research Results
 `schema`:
     - Research Query: research topic
+    - Main Thread ID: The main thread id
     - Start time: start time of the query
     - End time: end time of the query
     - Response: research summary
