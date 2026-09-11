@@ -3,12 +3,12 @@ import { TelepresenceEntry } from "./TelepresenceEntry";
 
 export const telepresencePlugin: KcodePlugin = {
   id: "telepresence",
-  name: "Kcode Telepresence",
+  name: "Talk To Me",
   version: "1.1.0",
   sdkVersion: "1.0.0",
   metadata: {
     id: "telepresence",
-    name: "Kcode Telepresence",
+    name: "Talk To Me",
     description: "Mock video meetings with configurable AI notes, summaries, and action items.",
     category: "Communication",
     version: "1.1.0",

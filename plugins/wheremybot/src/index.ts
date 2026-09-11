@@ -11,12 +11,12 @@ const emitLifecycle = (context: PluginContext, state: string) => {
 
 export const whereMyBotPlugin: KcodePlugin = {
   id: "wheremybot",
-  name: "WhereMyBot",
+  name: "Where My Bot",
   version: "1.1.0",
   sdkVersion: "1.0.0",
   metadata: {
     id: "wheremybot",
-    name: "WhereMyBot",
+    name: "Where My Bot",
     description: "Plan hotel delivery routes and operate a service robot in real time.",
     category: "Robotics",
     version: "1.1.0",
