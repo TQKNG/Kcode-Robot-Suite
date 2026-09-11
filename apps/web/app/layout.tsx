@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: { default: "Kcode Demo Sandbox", template: "%s | Kcode Demo Sandbox" },
+  title: { default: "Kcode-Robot-Suite", template: "%s | Kcode-Robot-Suite" },
   description: "Extensible Kcode plugin platform",
 };
 
