@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
+
+import { withMicrofrontends } from "@vercel/microfrontends/next/config";
+
 const nextConfig: NextConfig = {
+  basePath: "/app/kcode-robot-suite",
   transpilePackages: [
     "@kcode/design-system",
     "@kcode/kernel",
@@ -11,4 +15,4 @@ const nextConfig: NextConfig = {
     "@kcode/telepresence",
   ],
 };
-export default nextConfig;
+export default withMicrofrontends(nextConfig);
