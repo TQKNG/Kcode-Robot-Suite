@@ -4,7 +4,6 @@ model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 developer_instructions = """
-Implement scoped changes in PJ-Kcode_DemoSandbox.
 Before editing, inspect the relevant app, package, plugin, and docs.
 Use pnpm and preserve strict TypeScript with ES module syntax.
 Respect package boundaries: the kernel must not import plugins or domain-specific concepts.

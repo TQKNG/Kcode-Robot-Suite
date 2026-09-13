@@ -65,8 +65,6 @@ For bug fixes, reproduce the issue in the closest practical end-to-end flow befo
 Use `.codex/agents/*.toml` for project custom agents and `.agents/skills/*/SKILL.md` for reusable repo workflows.
 
 ## Version Control & Commit & Pull Request Guidelines
-- Use worktree for isolated development work. Naming convention: wt-[project-name][short description]-[date]
-- Each worktree link to a branch. Naming convention: feature/[short description], fix/[short description], update/[short description]
 - Use concise, imperative commit messages such as `Add plugin registry tests` or `Fix demo auth redirect`.
 - Pull requests should describe the change, list affected packages or plugins, link issues, include screenshots for UI changes, and mention verification commands run.
 

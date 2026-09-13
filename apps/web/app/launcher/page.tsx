@@ -14,10 +14,10 @@ export default async function Launcher() {
       <div className="main">
         <section className="hero">
           <div>
-            <p className="eyebrow">Microkernel / Plugin platform</p>
+            <p className="eyebrow">Application Dashboard</p>
             <h1>Build. Observe.<br />Operate.</h1>
           </div>
-          <p>Independently packaged applications sharing one secure shell, design language, and platform contract.</p>
+          <p>Independent application services availability</p>
         </section>
         {launchablePlugins.length > 0 ? (
           <section className="grid" aria-label="Available demos">
