@@ -97,7 +97,7 @@ export function OperationalDashboardEntry({ context }: PluginEntryProps) {
 
   const chartProps = { data: [...snapshot.history], margin: { top: 8, right: 10, bottom: 0, left: -20 } };
   return <div className="plugin-layout operations-dashboard">
-    <header className="operations-header"><div><span className="eyebrow">Fleet command / live mock telemetry</span><h1>Operational Dashboard</h1><p>Last synchronized {new Date(snapshot.capturedAt).toLocaleTimeString()}</p></div><div className="operations-actions"><button className="button" onClick={() => { operationsService.simulateNextFailure(); void load(); }}>Test error state</button><button className="button button--primary" disabled={loading} onClick={() => void load()}>{loading ? "Refreshing…" : "Refresh data"}</button></div></header>
+    <header className="operations-header"><div><p>Last synchronized {new Date(snapshot.capturedAt).toLocaleTimeString()}</p></div><div className="operations-actions"><button className="button" onClick={() => { operationsService.simulateNextFailure(); void load(); }}>Test error state</button><button className="button button--primary" disabled={loading} onClick={() => void load()}>{loading ? "Refreshing…" : "Refresh data"}</button></div></header>
 
     {error && <div className="operation-inline-error" role="alert">Refresh failed: {error}. Showing the last successful snapshot.</div>}
     <section className="metrics" aria-label="Key operational metrics">
