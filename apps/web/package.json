@@ -18,7 +18,6 @@
     "@kcode/services": "workspace:*",
     "@kcode/telepresence": "workspace:*",
     "@kcode/wheremybot": "workspace:*",
-    "@vercel/microfrontends": "^2.4.0",
     "lucide-react": "^0.468.0",
     "next": "^15.2.4",
     "react": "^19.0.0",
