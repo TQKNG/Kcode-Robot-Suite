@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
-import { withMicrofrontends } from "@vercel/microfrontends/next/config";
-
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const useMicrofrontends = process.env.VERCEL== "1"
 
 const nextConfig: NextConfig = {
   basePath,
@@ -27,4 +24,4 @@ const nextConfig: NextConfig = {
     "@kcode/telepresence",
   ],
 };
-export default useMicrofrontends?withMicrofrontends(nextConfig):nextConfig;
+export default nextConfig;
