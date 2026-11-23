@@ -8,7 +8,7 @@ The root `package.json` version is the same value and is updated by the release 
 
 Release-please can only open a release pull request when the repository allows GitHub Actions to create pull requests.
 Enable "Allow GitHub Actions to create and approve pull requests" under Settings > Actions > General > Workflow permissions.
-This setting was disabled when this guide was last verified, so enable it before expecting a release pull request.
+This setting is enabled for this repository, and it must stay enabled for release-please to open a release pull request.
 
 ## How a release happens
 
